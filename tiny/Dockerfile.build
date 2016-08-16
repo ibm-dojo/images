@@ -1,0 +1,5 @@
+FROM alpine
+MAINTAINER Morgan Bauer <mbauer@us.ibm.com>
+RUN apk update && apk add nasm
+ADD hello64.asm hello64.asm
+RUN nasm -f bin -o hello hello64.asm && chmod +x hello
