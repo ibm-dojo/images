@@ -3,7 +3,7 @@ RUN apk update
 RUN apk add curl docker
 RUN mkdir /docker
 
-ENV DOCKER_VERSION=1.12.0
+ENV DOCKER_VERSION=1.12.1
 
 RUN curl -s https://get.docker.com/builds/Linux/x86_64/docker-$DOCKER_VERSION.tgz | \
         tar -C /tmp/ -xvzf- && \
